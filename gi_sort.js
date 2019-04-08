@@ -51,7 +51,18 @@
     
 
 */
+var tableData = [];
+var dataCategories = [];
+var sortIndex = 0;
+var sortDirection = 1;
 
+window.addEventListener("load", function(){
+   defineDataArray, writeTableData;
+});
+
+function defineDataArray(){
+   var tableRows = document.querySelectorAll("tr").table.sortable
+}
 
 
 

@@ -187,7 +187,7 @@ table {
    margin: 30px auto 20px;
    border-collapse: collapse;
    font-size: 1em;
-   background-color: 231, 231, 231);
+   background-color: (231, 231, 231);
    color: rgb(91, 91, 91);
 }
 
