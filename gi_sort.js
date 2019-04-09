@@ -56,12 +56,19 @@ var dataCategories = [];
 var sortIndex = 0;
 var sortDirection = 1;
 
-window.addEventListener("load", function(){
-   defineDataArray, writeTableData;
+window.addEventListener("load", function () {
+      defineDataArray,
+      writeTableData;
 });
 
-function defineDataArray(){
-   var tableRows = document.querySelectorAll("tr").table.sortable
+function defineDataArray() {
+      var tableRows = document.querySelectorAll("table.sortable tbody tr")
+      for (var i = 0; i < tableData.length; i++) {
+            var rowCells = i.children();
+            for (var n = 0; n < rowCells.length; n++) {
+                  rowCells.textContent
+            }
+      }
 }
 
 
@@ -72,14 +79,14 @@ function defineDataArray(){
 
 
 function dataSort2D(a, b) {
-   if (isNaN(parseFloat(a[sortIndex])) === false) {
-      return (a[sortIndex] - b[sortIndex])*sortDirection;
-   } else {
-      var astring = a[sortIndex].toLowerCase();
-      var bstring = b[sortIndex].toLowerCase();
-           
-      if (bstring > astring) return -sortDirection;
-      if (bstring < astring) return sortDirection;
-      return 0;
-   }
+      if (isNaN(parseFloat(a[sortIndex])) === false) {
+            return (a[sortIndex] - b[sortIndex]) * sortDirection;
+      } else {
+            var astring = a[sortIndex].toLowerCase();
+            var bstring = b[sortIndex].toLowerCase();
+
+            if (bstring > astring) return -sortDirection;
+            if (bstring < astring) return sortDirection;
+            return 0;
+      }
 }
