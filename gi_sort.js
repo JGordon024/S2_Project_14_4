@@ -51,26 +51,53 @@
     
 
 */
+//Creates several global variables and arrays
 var tableData = [];
 var dataCategories = [];
 var sortIndex = 0;
 var sortDirection = 1;
-
+//Loads the browser, and when it runs it runs an ananymous function that runs two other function
 window.addEventListener("load", function () {
       defineDataArray,
       writeTableData;
 });
-
+//Creates a function that 
 function defineDataArray() {
       var tableRows = document.querySelectorAll("table.sortable tbody tr")
       for (var i = 0; i < tableData.length; i++) {
             var rowCells = i.children();
             for (var n = 0; n < rowCells.length; n++) {
-                  rowCells.textContent
+                  rowValues[n].textContent;
             }
+            tableData + rowValues;
+      }
+      tableData.dataSort2D((a, b));
+}
+//Creates a function whos main purpose is to create an embedded stylesheet and give css rules
+function defineColumns() {
+      var cursorStyle = document.createElement("style");
+      document.head.appendChild(cursorStyle);
+      document.styleSheets[document.styleSheets.length - 1].insertRule(
+            "table.sortable thead tr th{ \
+                  cursor:pointer; \
+            }", 0);
+
+      document.styleSheets[document.styleSheets.length - 1].insertRule(
+            "table.sortable thead tr th::after{ \
+                        contnet:'\\00a0'; \
+                        font-family: monospace; \
+                        margin-left: 5px \
+                  }", 1);
+
+      document.styleSheets[document.styleSheets.length - 1].insertRule(
+            "table.sortable thead tr th:nth-of-type(1)::after{ \
+                              content:'\\25b2'; \
+                        }", 2);
+
+      for (var i = dataCategories.textContent; i < document.querySelectorAll("table tr").length; i++) {
+
       }
 }
-
 
 
 
